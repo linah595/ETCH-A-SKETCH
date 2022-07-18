@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(161, 158, 157);
+}
+
+:root {
+    --grid-cols: 1;
+    --grid--rows: 1;
+}
+
+#container {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    border: 1px solid black;
+    background-color: white;
+
+}
+
+.grid-item {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    /*margin: -1px -15px -5px -15px;*/
+    height: 50px;
+    width: 50px;
+    
+}
+
+.header{
+    text-align: center;
+    font-style: italic;
+    font-size: 30px;
+    padding: 10px;
+    margin: 10px 5px 10px;
+}
+
+.buttons {
+text-align: center;
+margin: 30px;
+}
+
+.black{
+    background-color: rgb(237, 126, 185);
+    font-style: italic;
+    padding: 8px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.rainbow{
+    background-color: rgb(237, 126, 185);
+    font-style: italic;
+    padding: 8px;
+    border-radius: 5px;
+    margin-right: 10px
+}
+.pink{
+    background-color: rgb(237, 126, 185);
+    font-style: italic;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 0px 0px 0px opx;
+}
+
+.eraser{
+    background-color: rgb(237, 126, 185);
+    font-style: italic;
+    padding: 8px;
+    border-radius: 5px;
+    margin-left: 10px
+}
