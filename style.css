@@ -1,76 +1,77 @@
-* {
-    box-sizing: border-box;
+body{
+    background-color: rgb(197, 250, 240);
+    overflow: hidden;
 }
 
-body {
-    background-color: rgb(161, 158, 157);
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
 }
 
-:root {
-    --grid-cols: 1;
-    --grid--rows: 1;
+section h1 {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 4em;
 }
 
-#container {
-    display: grid;
-    grid-gap: 1em;
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
-    border: 1px solid black;
-    background-color: white;
-
+.container {
+  width: 600px;  
+  height: 600px;  
+  display: grid;
+  z-index: 100;
+  background-color: rgb(240, 255, 240);
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.25),-5px -5px 10 rgb(255, 255, 255,1);
 }
 
-.grid-item {
-    padding: 15px;
-    border: 1px solid #ddd;
-    text-align: center;
-    /*margin: -1px -15px -5px -15px;*/
-    height: 50px;
-    width: 50px;
-    
+span{
+    position: absolute;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0) scale(0);
+        opacity: 0;
+    }
+
+    30%{
+        opacity: 1;
+        filter: hue-rotate(100deg);
+    }
+
+80%{
+    opacity: 1;
 }
 
-.header{
-    text-align: center;
-    font-style: italic;
-    font-size: 30px;
-    padding: 10px;
-    margin: 10px 5px 10px;
+    100%{
+        transform: translateY(-400%) rotate(360deg) scale(1);
+        filter: hue-rotate(360deg);
+        opacity: 0;
+    }
 }
 
-.buttons {
-text-align: center;
-margin: 30px;
+.buttons{
+    width: 600px;
+    position: absolute;
+    padding: 3em 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
 }
 
-.black{
-    background-color: rgb(237, 126, 185);
-    font-style: italic;
-    padding: 8px;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
-.rainbow{
-    background-color: rgb(237, 126, 185);
-    font-style: italic;
-    padding: 8px;
-    border-radius: 5px;
-    margin-right: 10px
-}
-.pink{
-    background-color: rgb(237, 126, 185);
-    font-style: italic;
-    padding: 8px;
-    border-radius: 5px;
-    margin: 0px 0px 0px opx;
-}
-
-.eraser{
-    background-color: rgb(237, 126, 185);
-    font-style: italic;
-    padding: 8px;
-    border-radius: 5px;
-    margin-left: 10px
+.btn{
+    padding: 1em 3em;
+    background-color: #f0fff0;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.25), inset -5px -5px 10 rgb(255, 255, 255,1);
+    border: none;
+    outline: none;
+    font-weight: bold;
+    z-index: 100;
+    letter-spacing: 1px;
 }
