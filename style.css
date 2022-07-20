@@ -58,12 +58,12 @@ span{
 
 .buttons{
     width: 600px;
-    position: absolute;
+    /*position: absolute;*/
     padding: 3em 0;
     bottom: 0;
     display: flex;
     justify-content: space-around;
-}
+} 
 
 .btn{
     padding: 1em 3em;
